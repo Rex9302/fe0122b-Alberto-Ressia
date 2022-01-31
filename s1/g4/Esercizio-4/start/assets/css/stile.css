@@ -1,0 +1,201 @@
+/* IMPOSTAZIONI GENERALI */
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(/assets/img/sfondo.png);
+    font: inherit;
+
+}
+
+/* HEADER */
+header {
+    margin: 15px;
+    padding: 25px;
+    background: linear-gradient(rgb(82, 199, 253), #515683);
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 10px 0px #000;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+header nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header li ::before {
+    content: "=> ";
+}
+
+header li ::after {
+    content: " <=";
+}
+
+header p {
+    margin-top: 15px;
+}
+
+/* MAIN */
+
+main {
+    margin: 15px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0px 2px 10px 0px #000;
+}
+
+main article h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#autore {
+    color: grey;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.lista {
+    padding: 25px;
+}
+
+code {
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1px;
+}
+
+strong {
+    font-weight: bold;
+    color: purple;
+}
+
+main a {
+    color: rgb(11, 184, 252)
+}
+
+.sottotitolo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 20px;
+
+}
+
+.novita {
+    background-color: #e3e3e3;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.novita p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+}
+
+iframe {
+    border-radius: 20px;
+    height: 200px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+/* TABELLE */
+table {
+    margin-bottom: 25px;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #e3e3e3;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+caption {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+th {
+    background-color: rgb(114, 114, 240);
+    color: white;
+    padding: 20px;
+    vertical-align: bottom;
+}
+
+tbody {
+    height: 200px;
+    border-bottom: 2px solid blue;
+}
+
+td {
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* FORM */
+
+
+input {
+    height: 25px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px dotted black;
+}
+
+/* ELEMENTI NELL' ASIDE */
+
+aside div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: #e3e3e3;
+    border: 1px solid grey;
+}
+
+.data {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    margin: 20px;
+    padding: 25px;
+    background: linear-gradient(0deg, rgba(0, 14, 7, 1) 0%, rgba(30, 99, 113, 1) 100%);
+    box-shadow: 0px 2px 10px 0px #000;
+    text-align: center;
+    font-weight: 300;
+    color: white;
+}
+
+footer a {
+    color: #ff00ff;
+}

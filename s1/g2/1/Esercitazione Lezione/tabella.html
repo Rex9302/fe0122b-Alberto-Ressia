@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Le Tabelle in HTML</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Come Utilizzare le tabelle in HTML">
+</head>
+
+<body>
+    <h1>Le Tabelle in HTML</h1>
+    <p>Sono utilizzate per mostrare dati tabellari</p>
+
+    <table border="1">
+<thead>
+            <tr>
+                <th>Nome</th>
+                <th>Anno</th>
+                <th>Presenze</th>
+            </tr>
+</thead>
+
+<tbody>
+            <tr>
+                <td>Luca</td>
+                <td>2021</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>2021</td>
+                <td>10</td>
+            </tr>
+</tbody>
+<tfoot>
+            <tr>
+                <td colspan="2">Media Presenze</td>
+                <td>15</td>
+            </tr>
+</tfoot>
+    </table>
+    <p>Ciao</p>
+
+    <hr>
+
+    <table border="1">
+
+            <tr>
+                <th>&nbsp;</th>
+                <th scope="col">Mattina</th>
+                <th scope="col">Pomeriggio</th>
+            </tr>
+
+        <tr>
+            <th scope="row">Lunedì</th>
+            <td>html</td>
+            <td>pratica</td>
+        </tr>
+        <tr>
+            <th scope="row">Martedì</th>
+            <td>css</td>
+            <td>pratica</td>
+        </tr>
+        <tr>
+            <th scope="row">Mercoledì</th>
+            <td>javascript</td>
+            <td>esame</td>
+        </tr>
+    </table>
+</body>
+
+
+</html>

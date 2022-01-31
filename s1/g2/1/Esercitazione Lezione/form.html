@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Form di contatto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Come Utilizzare le tabelle in HTML">
+</head>
+<body>
+    <h1>Form in HTML</h1>
+    <p>Lavora con noi</p>
+    <form action="elaboracodice.php" method="post">
+        <fieldset>
+            <legend>Dati Personali</legend>
+            <label for="nome">Nome e cognome</label>
+            <input type="text" name="nome" id="nome"> <br>
+
+            <label for="email">Indirizzo email</label>
+            <input type="email" name="email" id="email" required><br>
+
+            <label for="password">Inserisci password</label>
+            <input type="password" name="password" id="password"><br>
+
+            <label for="data">Data di nascita</label>
+            <input type="date" name="data" id="data"><br>
+
+            <label>Indica il tuo sesso</label>
+            <input type="radio" name="sesso" id="maschio"> <label for="maschio">M</label>
+            <input type="radio" name="sesso" id="femmina"><label for="femmina">F</label>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Competenze</legend>
+            <label for="range"></label>
+            <input type="range" name="skill" id="skill" min="1" max="10"><br>
+
+            <label for="posizione">Scegli il tuo ruolo</label>
+            <select name="posizione" id="posizione">
+                <option value="">-- Scegli --</option>
+                <option value="A">Apprendistato</option>
+                <option value="J">Junior Web Developer</option>
+                <option value="S">Senior Web Developer</option>
+            </select><br>
+            <label for="presentazione">Presentati in poche righe</label>
+            <textarea name="presentazione" id="presentazione" cols="30" rows="10" placeholder="Sii sintetico ma chiaro, specificando i tuoi obiettivie motivazioni"></textarea><br>
+
+            <label for="cv">Invia il tuo CV</label>
+            <input type="file" name="cv" id="cv" accept=".doc,.docx,.pdf,image/*">
+        </fieldset>
+        <fieldset>
+            <textarea name="privacy" id="privacy" cols="30" rows="10" readonly>Testo della privacy</textarea><br>
+            <input type="checkbox" name="accetta" id="accetta" value="SI" checked> <label for="accetta">Acconsento al trattamento dei dati</label><br>
+
+            <button type="submit">Invia la candidatura</button>
+        </fieldset>
+    </form>
+    
+</body>
+
+
+</html>

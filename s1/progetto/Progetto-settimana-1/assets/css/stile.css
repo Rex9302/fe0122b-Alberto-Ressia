@@ -1,0 +1,164 @@
+/*GENERALE*/
+
+body {
+    text-align: center;
+}
+
+body p,
+blockquote {
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    font-size: 1.2rem;
+    line-height: 1.65;
+}
+
+body h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #25a2c3;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/*HEADER*/
+
+header {
+    background-color: black;
+    text-align: center;
+    padding: 30px;
+}
+
+/*MAIN*/
+
+#sezione-1 {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 35px
+}
+
+#sezione-1 p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#titolo {
+    font-size: 2rem;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: #f04c2f;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px;
+    width: 150px;
+    display: inline-block;
+    border: none;
+}
+
+button a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none ;
+}
+
+.rotondo {
+    border-radius: 50%;
+    padding: 25px;
+}
+
+h2~p {
+    padding-bottom: 15px;
+}
+
+#sezione-2 {
+    padding: 30px;
+}
+
+#sezione-3 {
+    background-color: #e22d0e;
+    padding: 50px 30px 50px 30px;
+}
+
+#sezione-3 p {
+    color: white;
+}
+
+#garanzia {
+    color: white;
+    font-size: 1.7rem;
+}
+
+blockquote {
+    color: white;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#sezione-3 :last-child {
+    font-size: 0.8rem;
+}
+
+#sezione-4 {
+    padding: 50px 30px 40px 30px;
+}
+
+.box {
+    border: 1px solid lightgrey;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+
+.box p {
+    font-size: 0.9rem;
+}
+
+.box-min {
+    padding: 15px;
+}
+
+.box-min p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #25a2c3;
+    padding-bottom: 60px;
+}
+
+footer h2 {
+    color: white;
+    font-size: 1.7rem;
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    font-size: 1rem;
+}
+
+hr {
+    color: white;
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+footer p {
+    color: white;
+    font-size: 0.9rem;
+}
