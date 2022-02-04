@@ -425,7 +425,7 @@ footer a {
     aside section {
         margin-top: 75px;
         position: sticky;
-        top: 300px;
+        top: 325px;
     }
 }
 @media screen and (min-width:500px) and (max-width:800px){
@@ -444,7 +444,22 @@ footer a {
     aside section {
         grid-column: 1/4;
         margin-top: 50px;
+        order: -1;
     }
 
 
+}
+@media screen and (max-width:500px){
+
+    aside {
+        display: grid;
+
+    }
+
+
+    aside section {
+
+        margin-top: 50px;
+        order: -1;
+    }
 }

@@ -1,0 +1,624 @@
+/* IMPOSTAZIONI GENERALI */
+body {
+    font-family: 'Fira Sans', sans-serif;
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.fas {
+    color: #e42424;
+    font-size: 4rem;
+
+}
+
+button {
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    font-size: 1.9rem;
+    background: linear-gradient(90deg, rgba(108, 193, 226, 1) 0%, rgba(57, 47, 122, 1) 100%);
+    padding: 12px 18px;
+    border: none;
+    margin-top: 20px;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0px 0px 20px 0px;
+    font-size: 2rem;
+    box-shadow: 2px 2px 3px 3px #d3d3d3;
+}
+
+header img {
+    width: 180px;
+}
+
+header label,
+input {
+    display: none;
+}
+
+header a {
+    color: #000;
+}
+
+header button a {
+    color: white;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+/* MAIN */
+#hero {
+    background-image: url(/assets/images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 5vh 5vw 2vh 5vw;
+    line-height: 1.3;
+    text-shadow: 2px 2px 3px #000;
+}
+
+#hero h1 {
+    margin-bottom: 15px;
+}
+
+#hero a {
+    color: white;
+    text-shadow: 1px 1px 3px #000;
+}
+
+#hero p {
+    line-height: 2;
+}
+#hero button {
+    transition: box-shadow 1s;
+}
+#hero button:hover{
+    box-shadow: 0px 0px 11px 15px rgba(33,33,33,0.75)
+}
+
+#prima-sezione {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+}
+
+h2 {
+    line-height: 1.2;
+    padding: 50px 0px 25px 0px;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.boxTop {
+    padding: 20px 0px;
+}
+
+.boxTop i {
+    display: block;
+}
+
+#seconda-sezione {
+    background-color: #0c0633;
+    color: white;
+    text-align: center;
+    padding: 50px 5vw;
+}
+
+#terza-sezione {
+    text-align: center;
+    padding: 40px 5vw;
+}
+
+#terza-sezione img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+#terza-sezione i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+#terza-sezione p {
+    margin-bottom: 15px;
+}
+
+#coder {
+    text-align: center;
+    padding: 50px 5vw 40px 5vw;
+}
+#coder img {
+    width: 100%;
+    max-width: 400px;
+}
+#coder p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+table{
+    margin-top: 100px;
+    margin: auto;
+}
+caption{
+    font-size: 3rem;
+}
+
+th {
+    color: white;
+    background-color: steelblue;
+}
+#contatti {
+    text-align: center;
+    padding: 50px 5vw;
+}
+#contatti a{
+    display: block;
+    color: #000;
+}
+#contatti input {
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    font-style: italic;
+    border: 1px solid grey;
+
+}
+textarea{
+    font-style: italic;
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid grey;
+
+}
+hr{
+    visibility: hidden;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(238, 238, 238);
+    padding: 40px 5vw 25px 5vw;
+}
+
+
+.fab {
+    display: block;
+    color: #e42424;
+    font-size: 30px;
+}
+
+footer h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+footer p {
+    margin-bottom: 25px;
+}
+
+footer a {
+    color: black;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+#copy {
+    margin-top: 25px;
+}
+
+footer button {
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+}
+
+footer input {
+    border: 1px solid lightgray;
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    border-radius: 2px;
+}
+#user_email{
+    display: block;
+}
+
+/* RESPONSIVE */
+
+
+/* MOBILE *//* MOBILE *//* MOBILE *//* MOBILE *//* MOBILE *//* MOBILE */
+
+@media screen and (max-width:767px) {
+    html {
+        font-size: 62.5%;
+    }
+    header {
+        display: block;
+        height: 7vh;
+        padding-top: 2vh;
+        background-color: white;
+        box-shadow: 2px 2px 6px #d3d3d3;
+        padding-bottom: 0px;
+    }
+
+    header label,
+    input {
+        display: block;
+    }
+
+    header a {
+        color: #e42424;
+    }
+
+    header img {
+        width: 150px;
+        margin-left: 5vw;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-right: 0px;
+    }
+
+    #menu {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        background-color: white;
+        width: 100vw;
+        height: auto;
+        text-align: center;
+        box-shadow: 2px 2px 6px #d3d3d3;
+        transition: top 0.5s;
+    }
+
+    #menu button {
+        margin: 10px;
+    }
+
+    #menu button a {
+        color: white;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #hamburger:checked~nav ul {
+        top: 9vh;
+
+    }
+
+    nav ul li {
+        padding: 5px;
+        text-transform: uppercase;
+    }
+
+    header label {
+        position: absolute;
+        top: 3vh;
+        right: 5vw;
+        z-index: 2;
+    }
+
+    .fa-ellipsis-h {
+        font-size: 30px;
+        color: #e42424;
+    }
+
+    table {
+        display: none;
+    }
+    #mobile {
+        display: flex;
+        justify-content: center;
+        font-size: 1.4rem;
+        vertical-align: middle;
+    }
+    #mobile tr td:first-child{
+        font-weight: bold;
+    }
+    #mobile tr td{
+        text-align: left;
+    }
+
+    #mobile td{
+        width: 50%;
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+    .blu {
+        background-color: #d2dce7 ;
+    }
+
+}
+
+/* TABLET */ /* TABLET */ /* TABLET *//* TABLET *//* TABLET *//* TABLET */
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+    html {
+        font-size: 62.5%;
+    }
+    #hero {
+        padding: 5vh 20vw;
+    }
+
+    #top {
+        padding: 0px 20vw;
+
+    }
+
+    .boxTop {
+        width: 33%;
+        padding: 20px;
+    }
+
+    .boxTop h3 {
+        line-height: 1;
+        margin-bottom: 25px;
+    }
+
+    .boxTop p {
+        text-align: left;
+    }
+
+    #boxContainer {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    #terza-sezione {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+    }
+
+    #terza-sezione div {
+        padding-left: 50px;
+    }
+
+    footer section {
+        display: flex;
+        flex-basis: 30%;
+    }
+
+    footer section div {
+        width: 33%;
+        padding: 20px;
+    }
+    #copy{
+        text-align: center;
+    }
+    #sezione-coder{
+        display: flex;
+    }
+    #sezione-coder div {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    #mobile {
+        display: none;
+    }
+    table tr {
+        height: 100px;
+    }
+    table td,th {
+        vertical-align: middle;
+        padding: 15px;
+        font-size: 2rem;
+    }
+    
+    tr:nth-child(even){
+        background-color: #d2dce7;
+    }
+    #contatti section {
+        display: flex;
+    }
+    #contatti input {
+        border: 1px solid grey;
+        display: block;
+        width: 100%;
+        height: 35px;
+        margin-top: 20px;
+        font-style: italic;
+    }
+    textarea{
+        border: 1px solid grey;
+        display: block;
+        font-style: italic;
+        margin-top: 20px;
+        width: 100%;
+    }
+    #form-contatto{
+        width: 50%;
+        margin-top: 25px;
+        margin-right: 5vw;
+    }
+    #info{
+        width: 50%;
+        margin-left: 5vw;
+    }
+    
+}
+
+/*DESKTOP*//*DESKTOP*//*DESKTOP*//*DESKTOP*//*DESKTOP*//*DESKTOP*//*DESKTOP*/
+
+@media screen and (min-width:1200px) {
+
+    header {
+        font-size: 1.9rem;
+    }
+
+    header button {
+        font-size: 1.9rem
+    }
+
+    #hero {
+        padding: 15vh 25vw;
+    }
+
+    #top {
+        padding: 0px 30vw;
+
+    }
+
+    #boxContainer {
+        display: flex;
+        margin-bottom: 100px;
+    }
+
+    .boxTop {
+        width: 30%;
+        padding: 50px;
+    }
+
+    .boxTop h3 {
+        line-height: 1.2;
+    }
+
+    #terza-sezione {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+    }
+
+    #terza-sezione div {
+        padding-left: 50px;
+    }
+
+    footer {
+        padding: 50px 10vw 25px 10vw;
+    }
+
+    footer section {
+        display: flex;
+    }
+
+    footer section div {
+        padding: 0px 40px;
+        width: 33%;
+    }
+    footer .fab {
+        font-size: 50px;
+    }
+
+    #copy {
+        text-align: center;
+    }
+
+    .hide-br {
+        display: none;
+    }
+
+    #sezione-coder{
+        display: flex;
+    }
+    #sezione-coder div {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    #coder img {
+        width: 100%;
+        max-width: 640px;
+    }
+
+    #coder h1 {
+        margin-top: 50px;
+    }
+
+    #mobile{
+        display: none;
+    }
+    
+    table {
+        width: 70vw;
+        margin: 150px auto 25px auto;
+        
+    }
+    table tr {
+        height: 100px;
+    }
+    table td,th {
+        vertical-align: middle;
+        padding: 15px;
+        font-size: 2rem;
+    }
+    
+    tr:nth-child(even){
+        background-color: #d2dce7;
+    }
+    #contatti section {
+        display: flex;
+    }
+    #contatti h1{
+        margin-top: 25px;
+    }
+    #contatti input {
+        border: 1px solid grey;
+        display: block;
+        width: 80%;
+        height: 60px;
+        margin: 20px auto;
+        font-style: italic;
+        font-size: 1.2rem;
+
+    }
+    textarea{
+        border: 1px solid grey;
+        display: block;
+        font-style: italic;
+        margin: 20px auto;
+        width: 80%;
+        height: 100px;
+        font-size: 1.2rem;
+    }
+    #form-contatto{
+        width: 50%;
+        margin-top: 25px;
+    }
+    #info{
+        width: 50%;
+    }
+
+}
+
+
