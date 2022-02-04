@@ -305,6 +305,7 @@ footer input {
         text-align: center;
         box-shadow: 2px 2px 6px #d3d3d3;
         transition: top 0.5s;
+
     }
 
     #menu button {
@@ -321,7 +322,6 @@ footer input {
 
     #hamburger:checked~nav ul {
         top: 9vh;
-
     }
 
     nav ul li {
