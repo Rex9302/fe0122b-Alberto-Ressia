@@ -1,0 +1,62 @@
+body {
+    background-color: darkgrey;
+    font-family: 'Indie Flower', cursive;
+}
+
+h2 {
+    font-size: 72px;
+    text-align: center;
+}
+
+p {
+    font-size: 28px;
+    text-align: center;
+}
+
+.contenitore {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.giallo,
+.verde,
+.viola {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    box-shadow: 5px 5px 15px 0px black;
+    justify-content: center;
+    
+}
+
+.giallo {
+    background: linear-gradient(0deg, rgba(139, 139, 139, 1) 0%, rgba(219, 255, 0, 1) 100%);
+    transform: rotate(-5deg);
+}
+.giallo:hover{
+    transform: scale(1.2);
+}
+
+
+.verde {
+    background: linear-gradient(0deg, rgba(139, 139, 139, 1) 0%, rgba(0, 255, 136, 1) 100%);
+    transform: rotate(10deg);  
+}
+.verde:hover{
+    transform: scale(1.2);
+}
+
+.viola {
+    background: linear-gradient(0deg, rgba(139, 139, 139, 1) 0%, rgba(221, 140, 255, 1) 100%);
+    transform: rotate(-10deg);
+}
+
+.viola:hover{
+    transform: scale(1.2);
+}
