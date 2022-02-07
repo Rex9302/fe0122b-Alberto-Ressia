@@ -1,0 +1,84 @@
+.showcase-content div a {
+  font-size: 22px;
+  font-weight: bold;
+  display: block;
+  background-color: #f3e8d4;
+  width: 150px;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin: 50px auto;
+  color: #171717;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.btn-primary:hover {
+  background-color: blueviolet;
+  animation: primaria 2s infinite; }
+
+.btn-secondary:hover {
+  background-color: peru;
+  animation: secondaria 2s infinite; }
+
+@keyframes primaria {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-25px); }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes secondaria {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }
+
+body {
+  background-color: white;
+  color: white;
+  margin: 0px;
+  font-family: 'Poppins', sans-serif; }
+
+nav {
+  background-color: #f3e8d4;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  nav ul {
+    list-style-type: none;
+    padding: 0px; }
+    nav ul li {
+      display: inline-block;
+      padding-right: 5px; }
+      nav ul li a {
+        color: peru;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 5px; }
+        nav ul li a:hover {
+          background-color: #883121;
+          color: white; }
+  nav h1 {
+    color: black; }
+
+.showcase-content {
+  text-align: center;
+  padding: 3vw; }
+  .showcase-content div {
+    width: 100%; }
+    .showcase-content div h1 {
+      color: black; }
+    .showcase-content div p {
+      color: black;
+      font-size: 1.1rem;
+      padding: 15px 0px; }
+  .showcase-content img {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    display: block; }

@@ -1,0 +1,64 @@
+@import 'variabili', 'bottone';
+
+
+body{
+    background-color: $sfondo;
+    color: white;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    background-color: $colore-header;
+    width: $larghezza-piena;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            li {
+                display: inline-block;
+                padding-right: 5px;
+                a {
+                    color: peru;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 5px;
+                    &:hover{
+                        background-color: #883121;
+                        color: $bianco;
+                    }
+                }
+            }
+        }
+
+        h1 {
+            color: $nero;
+        }
+}
+
+.showcase-content {
+    text-align: center;
+    padding: 3vw ;
+    div {
+        width: $larghezza-piena;
+        h1 {
+            color: $nero;
+        }
+        p {
+            color: $nero;
+            font-size: 1.1rem;
+            padding: 15px 0px;
+        }
+
+    }
+    img {
+        width: $larghezza-piena;
+        max-width: 450px;
+        margin: auto;
+        border-radius: 10px;
+        margin-top: $top-50;
+        display: block;
+    }
+}
