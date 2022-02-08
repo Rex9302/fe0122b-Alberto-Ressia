@@ -1,0 +1,15 @@
+{
+  "name": "99",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/main.scss css/main.css -w"
+  },
+  "author": "Alberto",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

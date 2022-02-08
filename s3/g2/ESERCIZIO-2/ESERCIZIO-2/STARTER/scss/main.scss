@@ -1,0 +1,101 @@
+
+/*FONT*/
+$testo:'Quicksand', sans-serif;
+$intestazione: 'Lobster', cursive;
+
+/*MIXIN*/
+$screen-sm:480px;
+$screen-md:768px;
+$screen-lg:990px;
+$screen-xl:1200px;
+
+@mixin small {
+    @media screen and ( max-width:$screen-sm) {
+        @content;
+    }
+}
+@mixin medium {
+    @media screen and ( min-width:$screen-sm) and (max-width:$screen-md){
+        @content;
+    }
+}
+@mixin large {
+    @media screen and ( min-width:$screen-md) and (max-width:$screen-lg) {
+        @content;
+    }
+}
+@mixin xlarge {
+    @media screen and ( min-width:$screen-lg) {
+        @content;
+    }
+}
+
+/*MAIN*/
+@import 'header';
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $testo;
+    font-size: 18px;
+    @include small {
+        font-size: 15px;
+    }
+}
+
+#main {
+    display: flex;
+    padding: 0px 5vw;
+    justify-content: space-around;
+    @include small {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+#content{
+    width: 80%;
+    @include small{
+        width: 100%;
+    }
+}
+aside{
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+    
+    @include small{
+        width: auto;
+        justify-content: center;
+        
+    }
+    ul{
+        margin-top: 10vh;
+        padding: 0px;
+        font-family: $intestazione;
+        font-size: 22px;
+        list-style-type:none;
+        @include small {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+        li{
+            padding: 20px 0px;
+            @include small {
+                padding: 15px;
+            }
+        }
+}
+
+
+
+
+
+
+
+/*FOOTER*/
+footer {
+    height: 100px;
+    background-color: lightblue;
+}
