@@ -1,0 +1,22 @@
+.rosso {
+    background-color: rgb(201, 34, 34);
+}
+
+.blu {
+    background-color: rgb(109, 109, 245);
+}
+.giallo {
+    background-color: yellow;
+}
+.verde{
+    background-color: green;
+}
+.azz{
+    background-color: lightblue;
+}
+.grigio{
+    background-color: grey;
+}
+.testoBnc{
+    color: white;
+}
