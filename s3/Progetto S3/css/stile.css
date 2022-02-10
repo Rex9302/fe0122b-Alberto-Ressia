@@ -1,0 +1,39 @@
+body {
+  font-family: 'Poppins', sans-serif; }
+
+.colore-social {
+  color: #249D9F; }
+
+#hero {
+  display: flex;
+  min-height: 60vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
+
+.sfondo {
+  background-image: url(../img/sfondo1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.contrasto {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.arrotondato {
+  border-radius: 10px; }
+
+.icone-servizi {
+  font-size: 40px;
+  color: white;
+  background: linear-gradient(180deg, #249d9f 0%, #5eedf0 100%);
+  padding: 5px 15px;
+  border-radius: 15px;
+  margin-bottom: 10px; }
+
+.link_hover:hover {
+  color: white; }
+
+.mw-990 {
+  max-width: 990px; }
