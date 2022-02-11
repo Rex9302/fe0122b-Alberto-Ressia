@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass scss/app.scss css/stile.css -w"
+    "piero": "node-sass scss/app.scss css/stile.css -w"
   },
   "author": "alberto ressia",
   "license": "ISC",
