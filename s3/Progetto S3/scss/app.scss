@@ -1,14 +1,6 @@
-@function contrasto($colore) {
+$scuro:rgb(0, 0, 0);
 
-    @if (lightness($colore) > 50) {
-        @return rgba(0, 0, 0, 0.5);
-    }
-
-    @else {
-        @return rgba(255, 255, 255, 0.5);
-    }
-
-}
+@import 'function';
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -28,14 +20,15 @@ body {
 }
 
 .sfondo {
-    background-image: url(../img/sfondo1.jpg);
+    background-image: url(../img/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.contrasto {
-    background-color: contrasto(white);
+.bi-chevron-right, .bi-chevron-left {
+    background-color: $scuro;
+    color: contrasto($scuro);
 }
 
 .arrotondato {
