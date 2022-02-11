@@ -26,7 +26,8 @@ body {
     background-size: cover;
 }
 
-.bi-chevron-right, .bi-chevron-left {
+.bi-chevron-right,
+.bi-chevron-left {
     background-color: $scuro;
     color: contrasto($scuro);
 }
