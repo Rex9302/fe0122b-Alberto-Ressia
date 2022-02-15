@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="asset/css/stile.css">
+    <title>G2 Settimana 4</title>
+</head>
+
+<body>
+    <div class="contenitore-main">
+        <main>
+
+            <h1>Giorno 2 - Settimana 4</h1>
+
+            <div>
+                <h2>Esempio var - Addizione di variabili number</h2>
+                <p id="esempioVar"></p>
+                <code>var a = 3;
+                    var b = 4;
+                    var c = a + b;
+                    document.getElementById('esempioVar').innerHTML = c;</code>
+
+
+                <h2>Esempio var - Addizione di variabili string</h2>
+                <p id="esempioVar2"></p>
+                <code>var alpha = 'Giovanni';
+                var beta = 'Giorgio';
+                var theta = 'My name is';
+                var finale = theta + " " + alpha + " " + beta;
+                document.getElementById('esempioVar2').innerHTML = finale;</code>
+            </div>
+
+            <div>
+                <h2>Esempio let - Addizione variabili number in let</h2>
+                <p id="esempioLet"></p>
+                <code>var a = 34;
+                var b = 45; {
+                    let a = 5;
+                    let b = 4;
+                    let c = a + b;
+                    document.getElementById('esempioLet').innerHTML = c;
+                }</code>
+
+
+                <h2>Esempio let - Addizione stringhe in let</h2>
+                <p id="esempioLet2"></p>
+                <code>var alpha = 'test';
+                var theta = ' Call me'; {
+                    let alpha = 'But';
+                    let theta = 'Everybody';
+                    let zeta = 'Calls Me';
+                    let finale = alpha + " " + theta + " " + zeta + " " + beta;
+                    document.getElementById('esempioLet2').innerHTML = finale;
+                }</code>
+            </div>
+
+            <div>
+                <h2>Esempio Const</h2>
+                <p id="esempioConst"></p>
+                <code>const GiovanniGiorgio = 'Giovanni Giorgio';
+                document.getElementById('esempioConst').innerHTML = theta + " " + GiovanniGiorgio;
+            </code>
+            </div>
+
+
+            <div>
+                <h2>Esempio Boolean</h2>
+                <p id="boolean"></p>
+                <code>document.getElementById('boolean').innerHTML = Boolean(a > b);</code>
+            </div>
+
+        </main>
+
+
+        <div id="calcolatrice">
+            <h2>Calcolatrice</h2>
+
+            <div class="container">
+                <div class="schermo"><input type="text" name="display" id="ops" readonly="readonly" class="display">
+                </div>
+                <div class="numeri"> <input type="submit" id="7" value="7" onclick="tasti(7)"> </div>
+                <div class="numeri"> <input type="submit" id="8" value="8" onclick="tasti(8)"> </div>
+                <div class="numeri"> <input type="submit" id="9" value="9" onclick="tasti(9)"> </div>
+                <div class="numeri"> <input type="submit" id="/" value="/" onclick="tasti('/')"> </div>
+                <div class="numeri"> <input type="submit" id="4" value="4" onclick="tasti(4)"> </div>
+                <div class="numeri"> <input type="submit" id="5" value="5" onclick="tasti(5)"> </div>
+                <div class="numeri"> <input type="submit" id="6" value="6" onclick="tasti(6)"> </div>
+                <div class="numeri"> <input type="submit" id="*" value="*" onclick="tasti('*')"> </div>
+                <div class="numeri"> <input type="submit" id="1" value="1" onclick="tasti(1)"> </div>
+                <div class="numeri"> <input type="submit" id="2" value="2" onclick="tasti(2)"> </div>
+                <div class="numeri"> <input type="submit" id="3" value="3" onclick="tasti(3)"> </div>
+                <div class="numeri"> <input type="submit" id="-" value="-" onclick="tasti('-')"> </div>
+                <div class="numeri"> <input type="submit" id="0" value="0" onclick="tasti(0)"> </div>
+                <div class="numeri"> <input type="submit" id="." value="." onclick="tasti('.')"> </div>
+                <div class="numeri"><input type="submit" id="c" value="C" onclick="cancella()"></div>
+                <div class="numeri"> <input type="submit" id="+" value="+" onclick="tasti('+')"> </div>
+                <div class="uguale"> <input type="submit" id="=" value="=" onclick="operazione()"> </div>
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <script src="asset/js/script.js"></script>
+
+
+</body>
+
+</html>
