@@ -1,0 +1,13 @@
+@function contrasto($colore) {
+
+    @if (lightness($colore) > 50){
+        @return #000;
+    } @else{
+        @return #fff;
+    }
+    
+}
+
+h1 {
+    background-color: contrasto(red)
+}
