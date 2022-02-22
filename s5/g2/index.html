@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio g2 Settimana 5</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        h2 {
+            font-weight: 400;
+            background-color: crimson;
+            color: white;
+            text-align: center;
+        }
+
+        button {
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            max-width: fit-content;
+            margin: 0px 25px;
+        }
+    </style>
+
+
+    <div style="display: flex; justify-content: center; margin-bottom:50px;">
+        <button onclick="calcoloBudget()">Calcola il budget</button>
+        <button onclick="esperimento()">Esperimento</button>
+    </div>
+
+
+<div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; align-items: center; flex-direction: column; width: 40%;">
+            <h2 id="test"></h2>
+            <h2 id="test1"></h2>
+            <h2 id="test2"></h2>
+            <h2 id="test3"></h2>
+    
+        </div>
+        <div id="lista" style="text-align: center; width: 60%;"></div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
