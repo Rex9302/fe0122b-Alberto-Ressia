@@ -35,6 +35,8 @@ function calcoloBudget() {
 
 var totale = 100;
 
+var counter = 0;
+
 function esperimento() {
 
     tempo = setTimeout(esperimento, 10);
@@ -56,21 +58,39 @@ function esperimento() {
         console.log('Hai quasi finito i dobloni!');
     }
 
-
-
     totale = totale - spese;
 
-    if (totale == 0){
+    if (totale == 0) {
         document.querySelector('#test3').innerHTML = `Hai finito i dobloni!`;
         clearTimeout(tempo);
+        mostraBtn();
+
     }
 
-    if (totale < 0){
-        document.querySelector('#barbun').innerHTML = `Sei in debito di: ${totale} dobloni! Paga!`;
+    if (totale < 0) {
+        document.querySelector('#barbun').innerHTML = `Il tuo bilancio è ${totale} dobloni! Paga!`;
         clearTimeout(tempo);
+        mostraBtn();
     }
+
 
     document.querySelector('#lista').innerHTML += `<p> Hai speso ben : ${spese} dobloni! Ti rimangono ${totale} dobloni</p>`
+    console.log(counter)
+}
+
+function mostraBtn(){
+        document.getElementById('reset').style.visibility = 'visible'
+}
 
 
+function reset(){
+
+        document.querySelector('#test').innerHTML = ``
+        document.querySelector('#test1').innerHTML = ``
+        document.querySelector('#test2').innerHTML = ``
+        document.querySelector('#test3').innerHTML = ``
+        document.querySelector('#barbun').innerHTML = ``
+        document.querySelector('#lista').innerHTML = ``
+        document.getElementById('reset').style.visibility = 'hidden'
+        totale = 100;
 }
