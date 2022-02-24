@@ -1,0 +1,35 @@
+body{
+    background-color: #171717;
+    color: #FFFF99;
+    font-family: 'Roboto Serif', sans-serif;
+}
+#contenitore{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+#todo{
+    margin-top: 30vh;
+}
+#lista{
+    padding: 0px;
+    list-style-type: none;
+    width: 75vw;
+}
+#lista li {
+    width: 100%;
+    background-color: #464646;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin: 15px -19px;
+}
+.bi{
+    font-size: 30px;
+    padding-top: 10px;
+}
+#testo{
+    padding: 4px 10px;
+    width: 75vw;
+}
