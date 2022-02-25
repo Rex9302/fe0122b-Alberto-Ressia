@@ -1,13 +1,18 @@
+
 document.querySelector('#add').addEventListener('click', function () {
     let valore = document.querySelector('#testo').value;
     if (!valore)
         return
     let li = document.createElement('li')
-    li.innerText = valore;
+
+    li.innerHTML = valore + '<i class="bi bi-dash-circle-fill"></i>'
+
+    let close = li.querySelector('li i')
+
     document.querySelector('#lista').append(li)
     document.querySelector('#testo').value = ''
 
-    li.addEventListener('click', function (){
+    close.addEventListener('click', function (){
     li.remove()
     elimina(valore)
 })
@@ -30,11 +35,12 @@ function creaHtml() {
 
     db.forEach(function (elemento) {
         let li = document.createElement('li')
-        li.innerText = elemento
+        li.innerHTML = elemento + '<i class="bi bi-dash-circle-fill"></i>';
+        let close = li.querySelector('li i')
 
         document.querySelector('#lista').append(li)
 
-        li.addEventListener('click', function () {
+        close.addEventListener('click', function () {
             li.remove()
             elimina(elemento)
         })

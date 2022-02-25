@@ -20,14 +20,22 @@ body{
 #lista li {
     width: 100%;
     background-color: #464646;
-    cursor: pointer;
-    padding: 5px 15px;
+    padding: 6px 15px;
     border-radius: 15px;
     margin: 15px -19px;
+    font-size: 17px;
+}
+.bi-dash-circle-fill{
+    padding: 0px !important;
+    float: right;
+    margin-top: -6px;
+    margin-right: -53px;
 }
 .bi{
     font-size: 30px;
     padding-top: 10px;
+    cursor: pointer;
+
 }
 #testo{
     padding: 4px 10px;
