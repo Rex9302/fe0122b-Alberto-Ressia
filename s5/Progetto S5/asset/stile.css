@@ -1,5 +1,6 @@
 body{
-    background-color: #171717;
+    background: rgb(54,54,54);
+    background: linear-gradient(150deg, rgba(54,54,54,1) 50%, rgba(0,0,0,1) 100%);
     color: #FFFF99;
     font-family: 'Roboto Serif', sans-serif;
 }
@@ -40,4 +41,5 @@ body{
 #testo{
     padding: 4px 10px;
     width: 75vw;
+    border: none;
 }
