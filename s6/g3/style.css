@@ -1,0 +1,44 @@
+main {
+    margin-top: 200px;
+}
+
+#carosello {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-pan {
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+#dsp-pan {
+    height: 165px;
+    width: 325px;
+    float: left;
+    overflow: hidden;
+}
+
+#img-l {
+    position: relative;
+    width: 1600px;
+    list-style: none;
+}
+
+#img-l li {
+    float: left;
+    width: 300px;
+}
+
+#img-l li img {
+    width: 250px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.disable{
+    pointer-events: none;
+}
