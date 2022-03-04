@@ -45,6 +45,7 @@ h2 {
     opacity: 0;
     position: absolute;
     transform-origin: center;
+    border-radius: 10px;
 }
 
 .restart {

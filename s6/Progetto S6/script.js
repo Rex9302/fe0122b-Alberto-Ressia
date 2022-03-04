@@ -27,7 +27,7 @@ $(() => {
 
                 $(this).children().animate({ opacity: '1' })
                 $(this).addClass('disabilita')             
-
+                $(this).children().css('background-color', 'Tomato') 
                 let imgID = $(this).children().attr('id')
                 let imgSrc = $(this).children().attr('src')
 
@@ -50,14 +50,23 @@ $(() => {
                             $('#' + immaginiCliccate[1].id).animate({ opacity: '0' })
                             $('.images').removeClass('disabilita')
                             immaginiCliccate = [];
-                        }, 800)
+                        }, 1000)
                     }
                 }
             }
 
         } if (segna == 8) {
             $('#pulsanti').css('display', 'flex')
-            $('#punteggio-finale').text(counter)
+
+            if(counter == 16){
+                $('#punteggio-finale').text(counter + ' Partita perfetta!')
+            }
+            if(counter > 16 && counter <30){
+                $('#punteggio-finale').text(counter + ' Buona partita!')
+            }
+            if(counter > 30){
+                $('#punteggio-finale').text(counter + ' Puoi fare di meglio!')
+            }
         }
     })
 
@@ -67,6 +76,18 @@ $(() => {
         location.reload();
     })
 
+    //tempo
+
+    var t = 0
+    setInterval(function () {
+        if(segna < 8){
+            $("#tempo").text(t + ' secondi');
+            t++;
+        }else{
+            stop()
+        }
+
+    }, 1000);
 
 
 });
