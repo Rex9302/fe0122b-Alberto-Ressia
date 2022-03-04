@@ -17,6 +17,9 @@ $(() => {
 
     $('.images').click(function () {
 
+        let audio = $("#mysoundclip")[0];
+        audio.play();
+
         if (segna < 8) {
 
             var counter = $('#clicks').text()
@@ -28,6 +31,7 @@ $(() => {
                 $(this).children().animate({ opacity: '1' })
                 $(this).addClass('disabilita')             
                 $(this).children().css('background-color', 'Tomato') 
+
                 let imgID = $(this).children().attr('id')
                 let imgSrc = $(this).children().attr('src')
 
@@ -41,7 +45,11 @@ $(() => {
                         $('#' + immaginiCliccate[0].id).css('background-color', 'turquoise')
                         $('#' + immaginiCliccate[1].id).css('background-color', 'turquoise')
                         segna++
-                        console.log(segna)
+
+                        let audio1 = $("#success")[0];
+                        audio1.play();
+                        
+
                         immaginiCliccate = [];
 
                     } else {
@@ -49,6 +57,7 @@ $(() => {
                             $('#' + immaginiCliccate[0].id).animate({ opacity: '0' })
                             $('#' + immaginiCliccate[1].id).animate({ opacity: '0' })
                             $('.images').removeClass('disabilita')
+
                             immaginiCliccate = [];
                         }, 1000)
                     }
@@ -57,6 +66,8 @@ $(() => {
 
         } if (segna == 8) {
             $('#pulsanti').css('display', 'flex')
+            let audio = $("#win")[0];
+            audio.play();
 
             if(counter == 16){
                 $('#punteggio-finale').text(counter + ' Partita perfetta!')
@@ -88,6 +99,5 @@ $(() => {
         }
 
     }, 1000);
-
 
 });
