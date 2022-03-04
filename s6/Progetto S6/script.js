@@ -29,8 +29,8 @@ $(() => {
             if (immaginiCliccate.length < 2) {
 
                 $(this).children().animate({ opacity: '1' })
-                $(this).addClass('disabilita')             
-                $(this).children().css('background-color', 'Tomato') 
+                $(this).addClass('disabilita')
+                $(this).children().css('background-color', 'Tomato')
 
                 let imgID = $(this).children().attr('id')
                 let imgSrc = $(this).children().attr('src')
@@ -48,16 +48,14 @@ $(() => {
 
                         let audio1 = $("#success")[0];
                         audio1.play();
-                        
+
 
                         immaginiCliccate = [];
 
                     } else {
                         setTimeout(function () {
-                            $('#' + immaginiCliccate[0].id).animate({ opacity: '0' })
-                            $('#' + immaginiCliccate[1].id).animate({ opacity: '0' })
-                            $('.images').removeClass('disabilita')
-
+                            $('#' + immaginiCliccate[0].id).animate({ opacity: '0' }).parent().removeClass('disabilita')
+                            $('#' + immaginiCliccate[1].id).animate({ opacity: '0' }).parent().removeClass('disabilita')
                             immaginiCliccate = [];
                         }, 1000)
                     }
@@ -69,13 +67,13 @@ $(() => {
             let audio = $("#win")[0];
             audio.play();
 
-            if(counter == 16){
+            if (counter == 16) {
                 $('#punteggio-finale').text(counter + ' Partita perfetta!')
             }
-            if(counter > 16 && counter <30){
+            if (counter > 16 && counter < 30) {
                 $('#punteggio-finale').text(counter + ' Buona partita!')
             }
-            if(counter > 30){
+            if (counter > 30) {
                 $('#punteggio-finale').text(counter + ' Puoi fare di meglio!')
             }
         }
@@ -91,10 +89,10 @@ $(() => {
 
     var t = 0
     setInterval(function () {
-        if(segna < 8){
+        if (segna < 8) {
             $("#tempo").text(t + ' secondi');
             t++;
-        }else{
+        } else {
             stop()
         }
 
