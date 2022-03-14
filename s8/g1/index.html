@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S8 G1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;            
+        }
+        #container{
+            margin-top: 25px;
+            margin-left: 25px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        input{
+            font-family: 'Poppins', sans-serif;
+            background-color: wheat;
+            border-radius: 8px;
+            padding: 7px;
+            border: none; 
+                      
+        }
+        button{
+            padding: 10px 25px;
+            font-family: 'Poppins', sans-serif;            
+            border: none;
+            color: white;
+            background-color: crimson;
+            margin: 15px 0px;
+            border-radius: 8px;
+
+        }
+    </style>
+</head>
+<body>
+    
+<div id="container">
+        <input type="number" name="g1" id="g1">GIOCATORE 1
+        <input type="number" name="g2" id="g2">GIOCATORE 2
+        <button id="invia">CALCOLA!</button>
+        <p id="random"></p>
+        <p id="risultato"></p>
+        <p id="risultato-perfetto"></p>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
