@@ -51,8 +51,11 @@ var Storico = /** @class */ (function () {
         var versamento = Number(add.value);
         var oggi = new Date();
         this.deposito = versamento;
-        var storicoFiglio = this.utente + ' versa ' + this.deposito + ' ' + oggi;
-        arrayF.push(storicoFiglio);
+        var obj = {};
+        obj[0] = this.utente;
+        obj[1] = this.deposito;
+        obj[2] = oggi;
+        arrayF.push(obj);
         console.log(arrayF);
     };
     Storico.prototype.storicoFP = function () {
@@ -60,17 +63,23 @@ var Storico = /** @class */ (function () {
         var presa = Number(remove.value);
         var oggi = new Date();
         this.prelievo = presa;
-        var storicoFiglio = this.utente + ' preleva ' + this.deposito + ' ' + oggi;
-        arrayF.push(storicoFiglio);
-        console.log(arrayF);
+        var objP = {};
+        objP[0] = this.utente;
+        objP[1] = this.prelievo;
+        objP[2] = oggi;
+        arrayFP.push(objP);
+        console.log(arrayFP);
     };
     Storico.prototype.storicoM = function () {
         var add = document.querySelector('#add1');
         var versamento = Number(add.value);
         var oggi = new Date();
         this.deposito = versamento;
-        var storicoMadre = this.utente + ' versa ' + this.deposito + ' ' + oggi;
-        arrayM.push(storicoMadre);
+        var obj = {};
+        obj[0] = this.utente;
+        obj[1] = this.deposito;
+        obj[2] = oggi;
+        arrayM.push(obj);
         console.log(arrayM);
     };
     Storico.prototype.storicoMP = function () {
@@ -78,9 +87,12 @@ var Storico = /** @class */ (function () {
         var presa = Number(remove.value);
         var oggi = new Date();
         this.prelievo = presa;
-        var storicoMadre = this.utente + ' preleva ' + this.deposito + ' ' + oggi;
-        arrayM.push(storicoMadre);
-        console.log(arrayM);
+        var objP = {};
+        objP[0] = this.utente;
+        objP[1] = this.prelievo;
+        objP[2] = oggi;
+        arrayMP.push(objP);
+        console.log(arrayMP);
     };
     return Storico;
 }());
@@ -89,13 +101,15 @@ var depoM = document.querySelector('#conto1');
 var depoF = document.querySelector('#conto2');
 var depoNoInt = document.querySelector('#conto3');
 //creazione
-var contoF = new SonAccount(0);
-var contoM = new MotherAccount(0, 0);
+var contoF = new SonAccount(1500);
+var contoM = new MotherAccount(2000, 2000);
 var storicoFiglio = new Storico('Figlio', 0, 0);
 var storicoMadre = new Storico('Madre', 0, 0);
 //array
 var arrayM = [];
+var arrayMP = [];
 var arrayF = [];
+var arrayFP = [];
 //
 depoF.innerHTML = contoF.balanceInit;
 depoM.innerHTML = contoM.balanceInit;
