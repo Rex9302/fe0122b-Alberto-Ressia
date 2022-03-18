@@ -1,0 +1,55 @@
+body::before{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-image: url('bg.jpg'); 
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  body{
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      margin:0;
+      font-family: 'Poppins', sans-serif !important;
+  }
+  
+  #wrapper{
+      z-index: 1000;
+      min-width: 65%;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 1px 1px 5px gray;
+      border-radius: 25px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+  
+  #wrapper h1 {
+      text-align: center;
+  }
+  
+  #auto{
+      padding: 10px;
+  }
+  
+  #auto option{
+      font-size: 20px;
+      font-weight: bold;
+  }
+  .dinamico p{
+      color: darkcyan;
+      text-transform: uppercase;
+  }
+  #scontato{
+      color:limegreen
+  }
+  #titolo{
+      font-weight: 600;
+  }
+  #vestiti{
+    font-weight: bold;
+    border-radius: 25px;
+  }

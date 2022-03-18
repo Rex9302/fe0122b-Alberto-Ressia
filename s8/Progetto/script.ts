@@ -1,25 +1,26 @@
 fetch('Abbigliamento.json')
     .then(response => response.json())
     .then(risposta => {
+        let arrVestiti: any = [];
         risposta.forEach((item: Abbigliamento) => {
 
-            let vestiti = new Abbigliamento(item.id, item.codprod, item.collezione, item.capo, item.modello, item.quantita, item.colore, item.prezzoivaesclusa, item.prezzoivainclusa, item.disponibile, item.saldo)
-            console.log( 'Prezzo scontato senza IVA ' + vestiti.getSaldocapo())
-            console.log( 'Prezzo da pagare scontato più IVA ' + vestiti.getAcquistoCapo() )
-            console.log(vestiti)
-            
-        })
-        console.log(vestito, vestito2,vestito3)
+            var vestiti = new Abbigliamento(item.id, item.codprod, item.collezione, item.capo, item.modello, item.quantita, item.colore, item.prezzoivaesclusa, item.prezzoivainclusa, item.disponibile, item.saldo);
 
-        console.log(vestito.getSaldocapo())
-        console.log(vestito2.getSaldocapo())
-        console.log(vestito3.getSaldocapo())
-
-        console.log(vestito.getAcquistoCapo())
-        console.log(vestito2.getAcquistoCapo())
-        console.log(vestito3.getAcquistoCapo())
+            arrVestiti.push(vestiti)
+            console.log(vestiti);
+            console.log('Prezzo scontato senza IVA ' + vestiti.getSaldocapo());
+            console.log('Prezzo da pagare scontato più IVA ' + vestiti.getAcquistoCapo());
+        });
+        for (let i = 0; i < arrVestiti.length; i++) {
+            console.log(arrVestiti[i].getSaldocapo());
+        }
+        //ELEMENTI CREATI A MANO
+        arrVestiti.push(vestito)
+        arrVestiti.push(vestito2)
+        arrVestiti.push(vestito3)
+        
+        populateSelectOptions(arrVestiti)
     })
-
 //CLASSE//
 class Abbigliamento {
     id: number;
@@ -47,17 +48,68 @@ class Abbigliamento {
         this.disponibile = disponibile;
         this.saldo = saldo;
     }
-    //Applico il saldo//
     getSaldocapo(): number {
-
         return Number((this.prezzoivaesclusa - (this.prezzoivaesclusa * this.saldo) / 100).toFixed(2))
     }
-    //Calcolo il costo tot. del capo//
     getAcquistoCapo(): number {
         return Number((this.getSaldocapo() * 1.22).toFixed(2))
     }
 }
+//OGGETTI CREATI A MANO
+let vestito = new Abbigliamento(6, 5473, 'inverno', 'giacca', 2174, 6, 'nero', 200, 244, 'negozio', 35)
+let vestito2 = new Abbigliamento(7, 8219, 'estate', 'bermuda', 8529, 7, 'blu', 15, 18.3, 'magazzino', 20)
+let vestito3 = new Abbigliamento(8, 3752, 'autunno', 'sciarpa', 9638, 6, 'giallo', 12, 14.64, 'negozio', 15)
 
-let vestito = new Abbigliamento(6,1727,'estate','canotta',1245,6,'bianco',100,122,'negozio',10)
-let vestito2 = new Abbigliamento(7,8712,'autunno','cappello',8945,7,'verde',10,12,'magazzino',8)
-let vestito3 = new Abbigliamento(8,9832,'inverno','sciarpa',1597,6,'giallo',20,24.4,'negozio',10)
+//VARIABILI
+var select: any = document.querySelector('#vestiti')
+var collect: any = document.querySelector('#collezione');
+var capo: any = document.querySelector('#capo');
+var quantita: any = document.querySelector('#quantita');
+var colore: any = document.querySelector('#colore');
+var ivaInclusa: any = document.querySelector('#ivaInclusa');
+var disponibile: any = document.querySelector('#disponibile');
+var saldo: any = document.querySelector('#saldo');
+var scontato: any = document.querySelector('#scontato')
+
+
+//FUNZIONI
+function populateSelectOptions(p: any) {
+
+    for (var i = 0; i < p.length; i++) {
+        var option = document.createElement('option')
+        option.setAttribute('value', p[i].id)
+        option.innerText = `${p[i].capo.toUpperCase()} `
+        select.append(option)
+    }
+
+    select.addEventListener('change', function mostraVestiti() {
+
+    try{
+        var idVestito = select.value;
+        var vestitoSel: any;
+        for (var i = 0; i < p.length; i++) {
+            if (p[i].id == idVestito) {
+                vestitoSel = p[i]
+            }
+        }
+        collect.innerText = vestitoSel.collezione;
+        capo.innerText = vestitoSel.capo;
+        quantita.innerText = vestitoSel.quantita;
+        colore.innerText = vestitoSel.colore;
+        ivaInclusa.innerText = vestitoSel.prezzoivainclusa + '€';
+        disponibile.innerText = vestitoSel.disponibile;
+        saldo.innerText = vestitoSel.saldo + '%';
+        scontato.innerText = 'Prezzo scontato: ' + vestitoSel.getAcquistoCapo() + ' €'
+    }
+    catch{
+        collect.innerText = '-';
+        capo.innerText = '-';
+        quantita.innerText = '-';
+        colore.innerText = '-';
+        ivaInclusa.innerText = '-';
+        disponibile.innerText = '-';
+        saldo.innerText = '-';
+        scontato.innerText = 'Seleziona un capo d\' abbigliamento';
+    }
+    });
+}
