@@ -76,6 +76,10 @@ var scontato: any = document.querySelector('#scontato')
 function populateSelectOptions(p: any) {
 
     for (var i = 0; i < p.length; i++) {
+      //  for( var prop in p[i]){
+      //      console.log(prop)
+      //      console.log(p[i][prop])
+      //  }
         var option = document.createElement('option')
         option.setAttribute('value', p[i].id)
         option.innerText = `${p[i].capo.toUpperCase()} `

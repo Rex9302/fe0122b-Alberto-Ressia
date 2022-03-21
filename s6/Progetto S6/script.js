@@ -2,6 +2,7 @@ $(() => {
 
     const mieImg = ["dinosaur", "dragon", "dragonfly", "kangaroo", "reindeer", "shark", "squid", "whale", "dinosaur", "dragon", "dragonfly", "kangaroo", "reindeer", "shark", "squid", "whale"];
 
+
     for (var i = 0; i < 16; i++) {
 
         let random = Math.floor(Math.random() * mieImg.length);
@@ -28,7 +29,7 @@ $(() => {
 
             if (immaginiCliccate.length < 2) {
 
-                $(this).children().animate({ opacity: '1' })
+                $(this).children().css('display', 'block')
                 $(this).addClass('disabilita')
                 $(this).children().css('background-color', 'Tomato')
 
@@ -54,8 +55,8 @@ $(() => {
 
                     } else {
                         setTimeout(function () {
-                            $('#' + immaginiCliccate[0].id).animate({ opacity: '0' }).parent().removeClass('disabilita')
-                            $('#' + immaginiCliccate[1].id).animate({ opacity: '0' }).parent().removeClass('disabilita')
+                            $('#' + immaginiCliccate[0].id).css('display', 'none').parent().removeClass('disabilita')
+                            $('#' + immaginiCliccate[1].id).css('display', 'none').parent().removeClass('disabilita')
                             immaginiCliccate = [];
                         }, 1000)
                     }
@@ -70,10 +71,10 @@ $(() => {
             if (counter == 16) {
                 $('#punteggio-finale').text(counter + ' Partita perfetta!')
             }
-            if (counter > 16 && counter < 30) {
+            if (counter > 16 && counter <= 35) {
                 $('#punteggio-finale').text(counter + ' Buona partita!')
             }
-            if (counter > 30) {
+            if (counter > 36) {
                 $('#punteggio-finale').text(counter + ' Puoi fare di meglio!')
             }
         }

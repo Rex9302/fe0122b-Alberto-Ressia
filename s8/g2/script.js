@@ -50,49 +50,53 @@ var Storico = /** @class */ (function () {
         var add = document.querySelector('#add2');
         var versamento = Number(add.value);
         var oggi = new Date();
-        this.deposito = versamento;
-        var obj = {};
-        obj[0] = this.utente;
-        obj[1] = this.deposito;
-        obj[2] = oggi;
-        arrayF.push(obj);
-        console.log(arrayF);
+        var obj = {
+            tipoOperazione: 'Versamento',
+            utente: this.utente,
+            valore: versamento,
+            data: oggi
+        };
+        array.push(obj);
+        console.table(array);
     };
     Storico.prototype.storicoFP = function () {
-        var remove = document.querySelector('#remove2');
-        var presa = Number(remove.value);
+        var add = document.querySelector('#remove2');
+        var deposito = Number(add.value);
         var oggi = new Date();
-        this.prelievo = presa;
-        var objP = {};
-        objP[0] = this.utente;
-        objP[1] = this.prelievo;
-        objP[2] = oggi;
-        arrayFP.push(objP);
-        console.log(arrayFP);
+        var objP = {
+            tipoOperazione: 'Prelievo',
+            utente: this.utente,
+            valore: deposito,
+            data: oggi
+        };
+        array.push(objP);
+        console.table(array);
     };
     Storico.prototype.storicoM = function () {
         var add = document.querySelector('#add1');
         var versamento = Number(add.value);
         var oggi = new Date();
-        this.deposito = versamento;
-        var obj = {};
-        obj[0] = this.utente;
-        obj[1] = this.deposito;
-        obj[2] = oggi;
-        arrayM.push(obj);
-        console.log(arrayM);
+        var obj = {
+            tipoOperazione: 'Versamento',
+            utente: this.utente,
+            valore: versamento,
+            data: oggi
+        };
+        array.push(obj);
+        console.table(array);
     };
     Storico.prototype.storicoMP = function () {
         var remove = document.querySelector('#remove1');
         var presa = Number(remove.value);
         var oggi = new Date();
-        this.prelievo = presa;
-        var objP = {};
-        objP[0] = this.utente;
-        objP[1] = this.prelievo;
-        objP[2] = oggi;
-        arrayMP.push(objP);
-        console.log(arrayMP);
+        var objP = {
+            tipoOperazione: 'Prelievo',
+            utente: this.utente,
+            valore: presa,
+            data: oggi
+        };
+        array.push(objP);
+        console.table(array);
     };
     return Storico;
 }());
@@ -106,14 +110,12 @@ var contoM = new MotherAccount(2000, 2000);
 var storicoFiglio = new Storico('Figlio', 0, 0);
 var storicoMadre = new Storico('Madre', 0, 0);
 //array
-var arrayM = [];
-var arrayMP = [];
-var arrayF = [];
-var arrayFP = [];
+var array = [];
 //
 depoF.innerHTML = contoF.balanceInit;
 depoM.innerHTML = contoM.balanceInit;
 depoNoInt.innerHTML = contoM.balanceNoInt;
+//figlio
 document.querySelector('#versamento2').addEventListener('click', function () {
     contoF.oneDeposit();
     storicoFiglio.storicoF();
@@ -126,6 +128,7 @@ document.querySelector('#prelievo2').addEventListener('click', function () {
     var remove = document.querySelector('#remove2');
     remove.value = '';
 });
+//madre
 document.querySelector('#versamento1').addEventListener('click', function () {
     contoM.Deposit1();
     storicoMadre.storicoM();

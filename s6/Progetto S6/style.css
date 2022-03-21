@@ -42,7 +42,7 @@ h2 {
 
 .images img {
     padding: 5px;
-    opacity: 0;
+    display: none;
     position: absolute;
     transform-origin: center;
     border-radius: 10px;

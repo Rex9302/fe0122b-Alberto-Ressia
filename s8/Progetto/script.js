@@ -58,6 +58,10 @@ var scontato = document.querySelector('#scontato');
 //FUNZIONI
 function populateSelectOptions(p) {
     for (var i = 0; i < p.length; i++) {
+        //  for( var prop in p[i]){
+        //      console.log(prop)
+        //      console.log(p[i][prop])
+        //  }
         var option = document.createElement('option');
         option.setAttribute('value', p[i].id);
         option.innerText = "".concat(p[i].capo.toUpperCase(), " ");

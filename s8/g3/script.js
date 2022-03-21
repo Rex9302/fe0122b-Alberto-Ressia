@@ -71,17 +71,22 @@ var fascia = document.querySelector('#fascia');
 var input = document.querySelector('#reddito');
 document.querySelector('#btn').addEventListener('click', function () {
     var reddito = Number(input.value);
-    var classeReddito = fascia.selectedIndex;
-    var calcInps = new Fascia1(reddito, classeReddito);
-    var cInps = document.querySelector('#inps');
-    cInps.innerHTML = calcInps.getTasseInps();
-    var cIrpef = document.querySelector('#irpef');
-    cIrpef.innerHTML = calcInps.getTasseIrpef();
-    var Tot = document.querySelector('#tasse');
-    Tot.innerHTML = calcInps.getTotTasse();
-    var Netto = document.querySelector('#netto');
-    Netto.innerHTML = calcInps.getNetto();
-    var imponibile = document.querySelector('#imponibile');
-    imponibile.innerHTML = calcInps.getFascia();
-    console.log(classeReddito);
+    if (reddito == 0) {
+        alert('Controlla l\'importo inserito');
+    }
+    else {
+        var classeReddito = fascia.selectedIndex;
+        var calcInps = new Fascia1(reddito, classeReddito);
+        var cInps = document.querySelector('#inps');
+        cInps.innerHTML = calcInps.getTasseInps();
+        var cIrpef = document.querySelector('#irpef');
+        cIrpef.innerHTML = calcInps.getTasseIrpef();
+        var Tot = document.querySelector('#tasse');
+        Tot.innerHTML = calcInps.getTotTasse();
+        var Netto = document.querySelector('#netto');
+        Netto.innerHTML = calcInps.getNetto();
+        var imponibile = document.querySelector('#imponibile');
+        imponibile.innerHTML = calcInps.getFascia();
+    }
+    input.value = '';
 });

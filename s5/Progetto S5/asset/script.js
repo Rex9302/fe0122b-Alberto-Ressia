@@ -51,7 +51,9 @@ creaHtml();
 function elimina(elemento){
     let elementiSalvati = localStorage.getItem('lista')
     let db = elementiSalvati == null ? [] : JSON.parse(elementiSalvati)
+    console.log(db)
     let indice = db.indexOf(elemento)
+    console.log(indice)
     db.splice(indice,1)
     localStorage.setItem('lista', JSON.stringify(db))
 }

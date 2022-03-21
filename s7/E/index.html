@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // chiamata Get
+        fetch('https://sofin.wp-admin.it/public/api/v1/user')
+        .then(response => response.json())
+        .then(data => console.log(data) )
+        
+
+
+        //chiamata post
+        fetch(
+            'https://sofin.wp-admin.it/public/api/v1/user', 
+            {
+                method: 'POST', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name : 'Nunzio',
+                    lastname : 'Buio',
+                    email : 'tesjhfsdukjy@test.com',
+                    role_id : 1,
+                    password : 'sfdafsdafsda'
+                }),
+            }
+        )
+        .then(response => response.json())
+        .then(data => {
+            alert('Utente '+data.id+' Creato')
+        })
+ 
+        
+    </script>
+</body>
+</html>

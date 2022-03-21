@@ -57,6 +57,9 @@ var input:any = document.querySelector('#reddito')
 
 document.querySelector('#btn').addEventListener('click',function(){
     var reddito = Number(input.value)
+    if(reddito == 0){
+        alert('Controlla l\'importo inserito')
+    }else{
     var classeReddito = fascia.selectedIndex
     var calcInps = new Fascia1(reddito, classeReddito)
     var cInps:any = document.querySelector('#inps')
@@ -69,6 +72,7 @@ document.querySelector('#btn').addEventListener('click',function(){
     Netto.innerHTML = calcInps.getNetto() 
     var imponibile:any = document.querySelector('#imponibile')
     imponibile.innerHTML = calcInps.getFascia() 
-    console.log(classeReddito)
+    }
+    input.value = ''
 })
 
