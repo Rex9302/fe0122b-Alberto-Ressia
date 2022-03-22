@@ -20,21 +20,21 @@ function populateRegioni(p) {
     }
 }
 function populateProvincie() {
-    var opt = document.querySelector('#provincie option');
+    var opt = document.querySelectorAll('#provincie option');
     var arrProvincie = [];
     var selezionato = regioni.value;
     fetch('province.json')
         .then(function (response) { return response.json(); })
         .then(function (risposta) {
         var option = document.createElement('option');
+        opt.forEach(function (prop) {
+            prop.remove();
+        });
+        option.setAttribute('value', 'none');
+        provincie.append(option);
         for (var i = 0; i < risposta.length; i++) {
             if (risposta[i].prov_reg == selezionato) {
                 arrProvincie.push(risposta[i].prov_nome);
-            }
-            else {
-                provincie.remove(opt);
-                option.setAttribute('value', 'none');
-                provincie.append(option);
             }
         }
         arrProvincie.forEach(function (element) {

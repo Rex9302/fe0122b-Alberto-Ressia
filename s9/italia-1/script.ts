@@ -21,20 +21,22 @@ function populateRegioni(p: any) {
     }
 }
 function populateProvincie() {
-    var opt: any = document.querySelector('#provincie option')
+    var opt: any = document.querySelectorAll('#provincie option')
     var arrProvincie: any = []
     var selezionato = regioni.value
     fetch('province.json')
         .then(response => response.json())
         .then(risposta => {
             var option = document.createElement('option')
+            opt.forEach((prop:any)=>{
+                prop.remove()
+            })
+            option.setAttribute('value', 'none')
+            provincie.append(option)
+
             for (var i = 0; i < risposta.length; i++) {
                 if (risposta[i].prov_reg == selezionato) {
                     arrProvincie.push(risposta[i].prov_nome)
-                } else {
-                    provincie.remove(opt)
-                    option.setAttribute('value', 'none')
-                    provincie.append(option)
                 }
             }
             arrProvincie.forEach(element => {
@@ -44,6 +46,7 @@ function populateProvincie() {
                 provincie.append(option)
             })
         });
+
     regSel.innerText = ''
     provSel.innerText = ''
     i1.setAttribute('src', '')
