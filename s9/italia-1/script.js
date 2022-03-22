@@ -21,7 +21,6 @@ function populateRegioni(p) {
 }
 function populateProvincie() {
     var opt = document.querySelectorAll('#provincie option');
-    var arrProvincie = [];
     var selezionato = regioni.value;
     fetch('province.json')
         .then(function (response) { return response.json(); })
@@ -34,15 +33,12 @@ function populateProvincie() {
         provincie.append(option);
         for (var i = 0; i < risposta.length; i++) {
             if (risposta[i].prov_reg == selezionato) {
-                arrProvincie.push(risposta[i].prov_nome);
+                var option = document.createElement('option');
+                option.setAttribute('value', risposta[i].prov_nome);
+                option.innerText = risposta[i].prov_nome;
+                provincie.append(option);
             }
         }
-        arrProvincie.forEach(function (element) {
-            var option = document.createElement('option');
-            option.setAttribute('value', element);
-            option.innerText = element;
-            provincie.append(option);
-        });
     });
     regSel.innerText = '';
     provSel.innerText = '';
