@@ -1,11 +1,14 @@
 [
     {
-        "audio_name":"heartbeat"
+        "audio_name":"heartbeat",
+        "audio_url":"heartbeat.mp3"
     },
     {
-        "audio_name":"honky_tonky_piano"
+        "audio_name":"honky_tonky_piano",
+        "audio_url":"honky_tonky_piano.mp3"
     },
     {
-        "audio_name":"mastermind"
+        "audio_name":"mastermind",
+        "audio_url":"mastermind.mp3"
     }
 ]

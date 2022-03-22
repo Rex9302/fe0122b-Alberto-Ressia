@@ -1,14 +1,18 @@
 [
     {
-        "video_name":"by_night"
+        "video_name":"by_night",
+        "video_url":"by_night.mp4"
     },
     {
-        "video_name":"Flight"
+        "video_name":"Flight",
+        "video_url":"Flight.mp4"
     },
     {
-        "video_name":"Flowers"
+        "video_name":"Flowers",
+        "video_url":"Flowers.mp4"
     },
     {
-        "video_name":"Sea"
+        "video_name":"Sea",
+        "video_url":"Sea.mp4"
     }
 ]
