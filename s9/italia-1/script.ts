@@ -32,7 +32,6 @@ function populateProvincie() {
                 if (risposta[i].prov_reg == selezionato) {
                     arrProvincie.push(risposta[i].prov_nome)
                 } else {
-                    arrProvincie.splice(0, risposta[i].prov_nome)
                     provincie.remove(opt)
                     option.setAttribute('value', 'none')
                     provincie.append(option)
