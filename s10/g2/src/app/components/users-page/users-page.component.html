@@ -1,0 +1,7 @@
+<div class="container mt-5">
+  <div *ngFor="let x of users; let i = index" class="card-header"
+    [routerLink]="['/users', x.id]">
+    <h3>{{x.nome}} {{x.role}}</h3>
+  </div>
+</div>
+<router-outlet></router-outlet>
